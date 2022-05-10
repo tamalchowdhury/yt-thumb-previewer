@@ -1,0 +1,14 @@
+$bg-color: gray;
+$theme-color: deepred;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-color; // placeholder
+  font-family: sans-serif;
+  color: #333;
+}
