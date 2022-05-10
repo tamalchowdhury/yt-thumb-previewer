@@ -39,6 +39,16 @@ export default function App() {
 
       {/* preview area will go here... */}
       {thumb && <img src={thumb} width={300} />}
+      <hr />
+      <p>play with the source code on Github 👇</p>
+      <p>
+        <a
+          href="https://github.com/tamalweb/yt-thumb-previewer"
+          target="_blank"
+        >
+          github.com/tamalweb/yt-thumb-previewer
+        </a>
+      </p>
     </div>
   )
 }
