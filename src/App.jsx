@@ -1,5 +1,8 @@
 import { useState } from "react"
 import "./scss/index.scss"
+import LogoDesktop from "./img/logo-desktop.png"
+import SliceHeader from "./img/slice-header.png"
+import SliceSidebar from "./img/slice-sidebar.png"
 
 export default function App() {
   // thumb is the base64 converted string
@@ -37,8 +40,23 @@ export default function App() {
         <input type="file" name="thumb" id="thumb" onChange={handleUpload} />
       </form>
 
-      {/* preview area will go here... */}
-      {thumb && <img src={thumb} width={300} />}
+      <div className="desktop">
+        <div className="desktop__header">
+          {/* <div className="desktop__header__logo">
+            <img src={LogoDesktop} alt="YouTube Logo" />
+          </div> */}
+          <img src={SliceHeader} />
+        </div>
+        <div className="desktop__main">
+          <div className="desktop__main__sidebar">
+            <img src={SliceSidebar} />
+          </div>
+          <div className="desktop__main__content">
+            {/* preview area will go here... */}
+            {thumb && <img src={thumb} width={192} />}
+          </div>
+        </div>
+      </div>
       <hr />
       <p>play with the source code on Github 👇</p>
       <p>

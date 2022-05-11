@@ -1,0 +1,30 @@
+.desktop {
+  background: #f9f9f9;
+
+  &__header {
+    min-height: 65px;
+    background: #fff;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 172px 1fr;
+
+    &__sidebar {
+      width: 285px;
+    }
+
+    &__content {
+      width: calc(100% - 285px);
+
+      padding: 20px;
+
+      &__related {
+        background: #fff;
+      }
+
+      &__feed {
+      }
+    }
+  }
+}
