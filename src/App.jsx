@@ -3,6 +3,8 @@ import "./scss/index.scss"
 import LogoDesktop from "./img/logo-desktop.png"
 import SliceHeader from "./img/slice-header.png"
 import SliceSidebar from "./img/slice-sidebar.png"
+import SampleThumbnail1 from "./img/sample1.jpg"
+import SampleLogo1 from "./img/samplelogo.jpg"
 
 export default function App() {
   // thumb is the base64 converted string
@@ -52,8 +54,12 @@ export default function App() {
             <img src={SliceSidebar} />
           </div>
           <div className="desktop__main__content">
-            {/* preview area will go here... */}
-            {thumb && <img src={thumb} width={192} />}
+            {thumb && <Video thumb={thumb} />}
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
           </div>
         </div>
       </div>
@@ -68,5 +74,27 @@ export default function App() {
         </a>
       </p>
     </div>
+  )
+}
+
+function Video({ thumb }) {
+  return (
+    <>
+      <div className="video">
+        <div className="video_thumbnail">
+          {thumb ? <img src={thumb} /> : <img src={SampleThumbnail1} />}
+        </div>
+        <div className="video__meta">
+          <div className="video__meta__logo">
+            <img src={SampleLogo1} alt="" />
+          </div>
+          <div className="video__meta__texts">
+            <div className="video__meta__title">My Video Title</div>
+            <div className="video__meta__channel_name">Channel Name</div>
+            <div className="video__meta__stats">125K views . 1 day ago</div>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }

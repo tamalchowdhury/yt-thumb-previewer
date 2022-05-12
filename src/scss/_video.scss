@@ -1,0 +1,19 @@
+.video {
+  display: grid;
+  gap: 15px;
+
+  &__thumbnail {
+  }
+
+  &__meta {
+    display: grid;
+    grid-template-columns: 27px 1fr;
+    gap: 8px;
+
+    &__logo {
+      & img {
+        border-radius: 50%;
+      }
+    }
+  }
+}
